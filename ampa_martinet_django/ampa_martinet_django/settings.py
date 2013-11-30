@@ -203,9 +203,6 @@ INSTALLED_APPS = (
     'cmsplugin_filer_teaser',
     'cmsplugin_filer_video',
     'reversion',
-    'dragoman_blog',
-    'dragoman_blog_admin',
-    'taggit',
 )
 
 # A sample logging configuration. The only tangible logging

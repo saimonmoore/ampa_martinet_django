@@ -7,9 +7,13 @@ admin.autodiscover()
 
 urlpatterns = i18n_patterns('',
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^blog/', include('dragoman_blog.urls')),
     url(r'^', include('cms.urls')),
 )
+
+urlpatterns = patterns('',
+    url(r'^weblog/', include('zinnia.urls')),
+    url(r'^comments/', include('django.contrib.comments.urls')),
+) + urlpatterns
 
 if settings.DEBUG:
     urlpatterns = patterns('',
@@ -17,3 +21,5 @@ if settings.DEBUG:
         {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
     url(r'', include('django.contrib.staticfiles.urls')),
 ) + urlpatterns
+
+
