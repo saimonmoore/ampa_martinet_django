@@ -14,5 +14,8 @@ media
 static
 tmp
 venv
-*.pyc
 staticfiles
+*.log
+*.pot
+*.pyc
+local_settings.py
